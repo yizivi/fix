@@ -1,0 +1,356 @@
+域用户远程更改计算机名   
+
+netdom renamecomputer dev-wangq /NewName:project-helt /userD:u1city.net\administrator /PasswordD:itadmin
+
+
+
+wmic远程结束进程   
+
+wmic /node:"192.168.70.10" /user:"domain\administrator" /password:"123456" process where name="excel.exe" call terminate
+
+
+
+注册表开启远程桌面   
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server下的fDenyTSConnections（dword类型）值设为0
+
+
+
+远程开启远程桌面  
+
+https://blog.sina.com.cn/s/blog_492b7b280101dsp0.html
+
+
+
+终结点格式无效  
+
+远程桌面发生身份验证错误，要求的函数不受支持  
+https://www.zhangfangzhou.cn/authentication-error.html?from=timeline
+
+
+
+CentOS 网卡  
+
+https://www.centoscn.com/CentOS/config/2015/0227/4753.html
+
+https://blog.sina.com.cn/s/blog_659bd4f40101ehvi.html
+
+
+
+virbr0 delete
+
+# virsh net-list 
+Name State Autostart 
+----------------------------------------- 
+default active yes
+# virsh net-destroy default 
+Network default destroyed 
+# virsh net-undefine default 
+Network default has been undefined 
+# service libvirtd restart 
+Stopping libvirtd daemon: [ OK ] 
+Starting libvirtd daemon: [ OK ]
+
+原文链接：https://www.linuxidc.com/Linux/2013-08/88720.htm   
+
+
+
+snmp   
+ 
+https://www.ruijie.com.cn/fw/wt/32509
+
+
+
+Email spf   
+
+https://www.renfei.org/blog/introduction-to-spf.html
+
+https://mail.163.com/hd/all/chengxin/3.htm
+
+https://www.kitterman.com/spf/validate.html?
+
+
+
+autodiscovery   
+
+https://www.5dmail.net/html/2011-5-31/2011531175045.htm
+
+
+
+Autodiscover   
+
+https://bbs.51cto.com/thread-1067183-1-1.html
+
+
+
+cas   
+
+https://dufei.blog.51cto.com/382644/1168058/
+
+
+
+exchange 2016  
+
+https://technet.microsoft.com/zh-cn/library/aa996058(v=exchg.150).aspx
+
+
+
+exchange move   
+
+https://543925535.blog.51cto.com/639838/461304/
+
+
+
+exchange ECP   
+
+报歉我们无法立即处理您的请求   
+https://social.technet.microsoft.com/Forums/exchange/en-US/3f0bdb6e-5af8-49ec-aa39-887e9a705d13/ecp-issues-sorry-were-having-trouble-processing-your-request-right-now?forum=exchange2010hosters
+
+
+
+exchange 性能计数   
+
+https://support.microsoft.com/zh-cn/help/2870416/-performance-counter-updating-error-after-you-install-an-exchange-server-2013-cumulative-update
+
+
+
+exchange   
+
+Exchange 2010 序列号（亲测可激活附图）：  
+标准版  
+XJG6B-4D4YV-4M338-Q42H6-39VT2
+企业版序列号  
+GVMTV-GMXWH-C234M-8FMWP-TFPFP
+
+Microsoft Exchange server 2013 安装有效   
+标准版: CPJFG-C9D94-J7F4K-T9Q48-FWKP7 
+企业版: MV2FQ-2MVJD-WK2VK-CB8XP-3Q2D9
+
+Exchange Server 2016 Enterprise Edition
+7WJV6-H9RMH-F4267-3R2KG-F6PBY
+
+
+
+wmi   
+
+https://www.cnblogs.com/ceachy/archive/2013/03/22/WMI_Usage.html
+
+wmic csproduct  
+
+
+
+wmic rdpermis  
+
+https://yuelei.blog.51cto.com/202879/291263/
+
+
+
+查询H-V 集成服务版本  
+
+https://blogs.msdn.microsoft.com/virtual_pc_guy/2012/03/06/using-powershell-to-check-integration-services-versions/
+
+https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/manage-hyper-v-integration-services
+
+Get-VM | ft Name, IntegrationServicesVersion
+
+
+
+sfc scannow  
+
+https://support.microsoft.com/zh-cn/help/900910/you-are-prompted-to-insert-a-windows-xp-sp2-cd-when-you-try-to-run-the
+
+
+
+citix  
+ 
+citix xenapp xendesktop
+ttps://www.citrix.com/account/
+
+
+
+SQL2016  
+
+SSMS 单独安装  
+https://msdn.microsoft.com/library/mt238290.aspx
+
+
+
+SCCM  
+
+SCCM2012   SCCM2016  
+BXH69-M62YX-QQD6R-3GPWX-8WMFY
+
+sccm 
+
+https://www.jerrysay.com/275.html
+
+https://www.tuicool.com/articles/ZRzyuqB
+
+https://www.it165.net/os/html/201304/5018.html
+
+https://wenku.baidu.com/view/13987b193169a4517723a3fc.html
+
+
+
+.net3.5安装  
+
+windows8和windows server2012不联网安装.net 3.5(包括2.0和3.0)   
+
+
+https://wenku.baidu.com/view/295960e54afe04a1b071de1a.html
+
+
+
+secedit.sdb参数  
+
+https://www.ithao123.cn/content-7743723.html
+
+
+
+win2003 转换虚拟机   
+
+https://support.microsoft.com/zh-cn/kb/954282
+https://support.microsoft.com/zh-cn/kb/833721
+
+
+
+P2V STOP 7B  
+
+https://huangchao2005.blog.51cto.com/1249888/484574
+https://blog.sina.com.cn/s/blog_79c0eb870101dfdh.html
+
+https://blogs.technet.microsoft.com/michs/2011/09/16/p2v-migration-issues-with-hyper-v-stop-0x0000007b/
+
+
+
+BE备份win2003 V  
+
+https://support.microsoft.com/zh-cn/kb/940032
+
+
+
+BE NDMP 端口冲突  
+
+https://zlwdouhao.blog.51cto.com/731028/1103869
+
+
+
+BE2014   
+
+https://esdownload.symantec.com/akdlm/CD/MTV/Backup_Exec_2014_14.1_SP1_MultiPlatforms_Multilingual.zip
+
+
+
+EDU MAIL  
+
+https://bbs.pcbeta.com/viewthread-1722565-1-1.html
+
+
+
+WPS SN  
+
+THUV2-32HH7-6NMHN-PTX7Y-QQCTH
+
+
+
+ForeFront 2010  
+
+https://www.microsoft.com/zh-cn/download/details.aspx?id=14238
+
+
+
+Switch  
+
+https://www.joysin.net/share/ebook/cisco-h3c-switch-configuration-and-management.html
+
+https://wenku.baidu.com/view/e6d669bd960590c69ec376f9.html
+
+https://focus.it168.com/200712/cisco%20jiao%20huan/index.html
+
+https://wenku.baidu.com/view/c732888783d049649b665820.html
+
+
+
+ibm server  
+
+https://www.ibm.com/support/cn/zh/
+
+
+
+wmic rdpermis  
+
+https://yuelei.blog.51cto.com/202879/291263/
+
+
+
+cisco  
+
+https://www.cisco.com/c/en/us/support/switches/sf200-24p-24-port-10-100-poe-smart-switch/model.html
+
+
+
+broadcom  
+
+https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/SearchByProduct.aspx?ProductCategory=336&Product=1245&Os=190
+
+
+
+RDS  
+
+6565792 4954438 6879321
+
+
+
+reg 域内批量分发注册表设置  
+
+https://blog.csdn.net/xuhuojun/article/details/4257060
+
+https://bbs.winos.cn/viewthread.php?tid=36785
+
+
+
+Intel Irst   
+
+https://www.intel.com/p/en_US/support/highlights/sftwr-prod/imsm
+
+https://blog.sina.com.cn/s/blog_559c14bd0101a382.html
+
+
+
+intel smsbus  
+
+https://downloadmirror.intel.com/10884/a08/INF_allOS_9.1.2.1007_PV.exe
+
+intel  
+
+https://downloadcenter.intel.com/zh-cn/download/25620/-Windows-7-8-1-10-15-40-
+
+
+
+myfax  
+
+https://www.myfax.com/free/
+
+
+
+固态硬盘  
+
+https://bbs.pcbeta.com/viewthread-1043654-1-1.html
+
+
+
+uefi gpt  
+
+https://tieba.baidu.com/p/3754146793
+
+
+
+ufei windows  
+
+https://bbs.pcbeta.com/viewthread-956396-1-1.html
+https://diybbs.zol.com.cn/3/308_22291.html
+https://bbs.pcbeta.com/viewthread-1356819-1-1.html
+
+userprofile  
+
+https://wenku.baidu.com/view/8cdc491eb7360b4c2e3f642e.htm
