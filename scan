@@ -35,4 +35,5 @@ if __name__ == '__main__':
         print(run_cmd("ps -ef|grep -v grep |grep curl >> /root/scan.txt", is_out=True))
         print(run_cmd("ps -ef|grep -v grep |grep wget >> /root/scan.txt", is_out=True))
         print(run_cmd("ps -ef|grep -v grep |grep lplp.ackng.com >> /root/scan.txt", is_out=True))
-        time.sleep(3)
+        time.sleep(3) 
+        
