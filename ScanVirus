@@ -6,8 +6,8 @@ def run_cmd(cmd_name, is_out=False):
 
     return_obj = subprocess.Popen(cmd_name, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     return_bytes = return_obj.communicate()
-    return_result_str = return_bytes[0][:-1].decode('GBK')
-    return_error_str = return_bytes[1][:-1].decode('GBK')
+    return_result_str = return_bytes[0][:-1].decode('utf-8')
+    return_error_str = return_bytes[1][:-1].decode('utf-8')
 
     del return_obj, return_bytes
 
