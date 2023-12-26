@@ -1,3 +1,7 @@
+windows如何进入安全模式  
+Bcdedit /set {bootmgr} displaybootmenu yes 进入开机选择页面  
+bcdedit /set {default} safeboot minimal 最小模式进入系统  
+
 Takeown   
 takeown /F M:\windows\ /a /r /d y & icacls M:\windows\  /T /C /grant users:(F,WDAC) /inheritance:e
 
