@@ -1,0 +1,65 @@
+运行 Sysprep /generalize 时，尝试 Sysprep 计算机错误时发生严重错误
+
+SYSPRP RunExternalDlls:Not running DLLs; either the machine is in an invalid
+
+state or we couldn't update the recorded state, dwRet = 0x1f
+
+ 
+
+直接解决方案如下：
+1，cscript c:\windows\system32\slmgr.vbs –rearm
+2，修改注册表内容：建议优先修改注册表进行测试。
+HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\SysprepStatus to 7
+HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\SoftwareProtectionPlatform\SkipRearm to 1
+HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\SysprepStatus\GeneralizationState\CleanupState:2
+HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\SysprepStatus\GeneralizationState\GeneralizationState:7
+删除记录：
+C:\Windows\System32\sysprep\Panther
+
+https://www.cnblogs.com/7schoolroom/p/13214487.html
+
+
+
+症状
+
+尝试在 Windows 7 中运行 Sysprep 并使用 /generalize 选项时，可能会收到以下错误消息：
+
+尝试对计算机进行 Sysprep 时发生严重错误。
+
+备注
+
+Setuperr.log 文件位于 \Windows\System32\Sysprep\Panther 文件夹中。
+
+
+
+Setuperr.log 文件可能包含如下所示的行：
+
+Error [0x0f0082] SYSPRP LaunchDll: Failure occurred while executing 'C:\Windows\System32\slc.dll, SLReArmWindows', returned error code -1073425657  
+
+Error [0x0f0070] SYSPRP RunExternalDlls: An error occurred while running registry sysprep DLLs, halting sysprep execution. dwRet = -1073425657  
+
+Error [0x0f00a8] SYSPRP WinMain: Hit failure while processing sysprep generalize providers; hr = 0xc004d307
+
+
+
+解决方法
+
+若要解决此问题，请在生成 Windows 映像时，使用 <XML 应答文件 (Unattend.xml) 中的 SkipRearm> 设置跳过重排过程。
+
+C:\Windows\Panther\Unattend.xml
+
+以下文本是适用于 Windows 7 的 XML 应答文件的示例：
+
+<settings pass="generalize">
+
+    <component name="Microsoft-Windows-Security-SPP" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="https://schemas点microsoft点com/WMIConfig/2002/State" xmlns:xsi="https://www点w3点org/2001/XMLSchema-instance">
+
+        <SkipRearm>1</SkipRearm>
+
+    </component>
+
+</settings>
+
+
+
+https://learn.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/error-occurs-when-running-sysprep-generalize
