@@ -7,8 +7,8 @@ state or we couldn't update the recorded state, dwRet = 0x1f
  
 
 直接解决方案如下：
-1，cscript c:\windows\system32\slmgr.vbs –rearm
-2，修改注册表内容：建议优先修改注册表进行测试。
+1 cscript c:\windows\system32\slmgr.vbs -rearm
+2 修改注册表内容：建议优先修改注册表进行测试。
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\SysprepStatus to 7
 HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\SoftwareProtectionPlatform\SkipRearm to 1
 HKEY_LOCAL_MACHINE\SYSTEM\Setup\Status\SysprepStatus\GeneralizationState\CleanupState:2
