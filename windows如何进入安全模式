@@ -1,0 +1,3 @@
+Bcdedit /set {bootmgr} displaybootmenu yes 进入开机选择页面
+
+bcdedit /set {default} safeboot minimal 最小模式进入系统
