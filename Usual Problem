@@ -11,14 +11,12 @@ wmic /node:"192.168.70.10" /user:"domain\administrator" /password:"123456" proce
 
 注册表开启远程桌面    
 
-# HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server下的fDenyTSConnections（dword类型）值设为0
-
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server下的fDenyTSConnections（dword类型）值设为0
 
 
 远程开启远程桌面  
 
 https://blog.sina.com.cn/s/blog_492b7b280101dsp0.html
-
 
 
 终结点格式无效  
@@ -27,13 +25,11 @@ https://blog.sina.com.cn/s/blog_492b7b280101dsp0.html
 https://www.zhangfangzhou.cn/authentication-error.html?from=timeline
 
 
-
 CentOS 网卡  
 
 https://www.centoscn.com/CentOS/config/2015/0227/4753.html
 
 https://blog.sina.com.cn/s/blog_659bd4f40101ehvi.html
-
 
 
 virbr0 delete
@@ -53,11 +49,9 @@ Starting libvirtd daemon: [ OK ]
 原文链接:https://www.linuxidc.com/Linux/2013-08/88720.htm   
 
 
-
 snmp   
  
 https://www.ruijie.com.cn/fw/wt/32509
-
 
 
 Email spf   
@@ -69,11 +63,9 @@ https://mail.163.com/hd/all/chengxin/3.htm
 https://www.kitterman.com/spf/validate.html?
 
 
-
 autodiscovery   
 
 https://www.5dmail.net/html/2011-5-31/2011531175045.htm
-
 
 
 Autodiscover   
@@ -81,11 +73,9 @@ Autodiscover
 https://bbs.51cto.com/thread-1067183-1-1.html
 
 
-
 cas   
 
 https://dufei.blog.51cto.com/382644/1168058/
-
 
 
 exchange 2016  
@@ -93,11 +83,9 @@ exchange 2016
 https://technet.microsoft.com/zh-cn/library/aa996058(v=exchg.150).aspx
 
 
-
 exchange move   
 
 https://543925535.blog.51cto.com/639838/461304/
-
 
 
 exchange ECP   
@@ -106,11 +94,9 @@ exchange ECP
 https://social.technet.microsoft.com/Forums/exchange/en-US/3f0bdb6e-5af8-49ec-aa39-887e9a705d13/ecp-issues-sorry-were-having-trouble-processing-your-request-right-now?forum=exchange2010hosters
 
 
-
 exchange 性能计数   
 
 https://support.microsoft.com/zh-cn/help/2870416/-performance-counter-updating-error-after-you-install-an-exchange-server-2013-cumulative-update
-
 
 
 exchange   
@@ -129,7 +115,6 @@ Exchange Server 2016 Enterprise Edition
 7WJV6-H9RMH-F4267-3R2KG-F6PBY
 
 
-
 wmi   
 
 https://www.cnblogs.com/ceachy/archive/2013/03/22/WMI_Usage.html
@@ -137,11 +122,9 @@ https://www.cnblogs.com/ceachy/archive/2013/03/22/WMI_Usage.html
 wmic csproduct  
 
 
-
 wmic rdpermis  
 
 https://yuelei.blog.51cto.com/202879/291263/
-
 
 
 查询H-V 集成服务版本  
@@ -153,11 +136,9 @@ https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/manage/ma
 Get-VM | ft Name, IntegrationServicesVersion
 
 
-
 sfc scannow  
 
 https://support.microsoft.com/zh-cn/help/900910/you-are-prompted-to-insert-a-windows-xp-sp2-cd-when-you-try-to-run-the
-
 
 
 citix  
@@ -166,12 +147,10 @@ citix xenapp xendesktop
 ttps://www.citrix.com/account/
 
 
-
 SQL2016  
 
 SSMS 单独安装  
 https://msdn.microsoft.com/library/mt238290.aspx
-
 
 
 SCCM  
@@ -190,7 +169,6 @@ https://www.it165.net/os/html/201304/5018.html
 https://wenku.baidu.com/view/13987b193169a4517723a3fc.html
 
 
-
 .net3.5安装  
 
 windows8和windows server2012不联网安装.net 3.5(包括2.0和3.0)   
@@ -199,18 +177,15 @@ windows8和windows server2012不联网安装.net 3.5(包括2.0和3.0)
 https://wenku.baidu.com/view/295960e54afe04a1b071de1a.html
 
 
-
 secedit.sdb参数  
 
 https://www.ithao123.cn/content-7743723.html
-
 
 
 win2003 转换虚拟机   
 
 https://support.microsoft.com/zh-cn/kb/954282
 https://support.microsoft.com/zh-cn/kb/833721
-
 
 
 P2V STOP 7B  
@@ -221,11 +196,9 @@ https://blog.sina.com.cn/s/blog_79c0eb870101dfdh.html
 https://blogs.technet.microsoft.com/michs/2011/09/16/p2v-migration-issues-with-hyper-v-stop-0x0000007b/
 
 
-
 BE备份win2003 V  
 
 https://support.microsoft.com/zh-cn/kb/940032
-
 
 
 BE NDMP 端口冲突  
@@ -234,16 +207,9 @@ https://zlwdouhao.blog.51cto.com/731028/1103869
 
 
 
-BE2014   
-
-https://esdownload.symantec.com/akdlm/CD/MTV/Backup_Exec_2014_14.1_SP1_MultiPlatforms_Multilingual.zip
-
-
-
 EDU MAIL  
 
 https://bbs.pcbeta.com/viewthread-1722565-1-1.html
-
 
 
 WPS SN  
@@ -251,11 +217,9 @@ WPS SN
 THUV2-32HH7-6NMHN-PTX7Y-QQCTH
 
 
-
 ForeFront 2010  
 
 https://www.microsoft.com/zh-cn/download/details.aspx?id=14238
-
 
 
 Switch  
@@ -264,10 +228,7 @@ https://www.joysin.net/share/ebook/cisco-h3c-switch-configuration-and-management
 
 https://wenku.baidu.com/view/e6d669bd960590c69ec376f9.html
 
-https://focus.it168.com/200712/cisco%20jiao%20huan/index.html
-
 https://wenku.baidu.com/view/c732888783d049649b665820.html
-
 
 
 ibm server  
@@ -275,11 +236,9 @@ ibm server
 https://www.ibm.com/support/cn/zh/
 
 
-
 wmic rdpermis  
 
 https://yuelei.blog.51cto.com/202879/291263/
-
 
 
 cisco  
@@ -287,17 +246,14 @@ cisco
 https://www.cisco.com/c/en/us/support/switches/sf200-24p-24-port-10-100-poe-smart-switch/model.html
 
 
-
 broadcom  
 
 https://driverdownloads.qlogic.com/QLogicDriverDownloads_UI/SearchByProduct.aspx?ProductCategory=336&Product=1245&Os=190
 
 
-
 RDS  
 
 6565792 4954438 6879321
-
 
 
 reg 域内批量分发注册表设置  
@@ -307,13 +263,9 @@ https://blog.csdn.net/xuhuojun/article/details/4257060
 https://bbs.winos.cn/viewthread.php?tid=36785
 
 
-
 Intel Irst   
 
 https://www.intel.com/p/en_US/support/highlights/sftwr-prod/imsm
-
-https://blog.sina.com.cn/s/blog_559c14bd0101a382.html
-
 
 
 intel smsbus  
@@ -325,11 +277,9 @@ intel
 https://downloadcenter.intel.com/zh-cn/download/25620/-Windows-7-8-1-10-15-40-
 
 
-
 myfax  
 
 https://www.myfax.com/free/
-
 
 
 固态硬盘  
@@ -337,10 +287,6 @@ https://www.myfax.com/free/
 https://bbs.pcbeta.com/viewthread-1043654-1-1.html
 
 
-
-uefi gpt  
-
-https://tieba.baidu.com/p/3754146793
 
 
 
