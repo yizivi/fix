@@ -1,0 +1,60 @@
+Office2016-to-Vol
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ul.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ppd.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ul-oob.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-pl.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-ppd.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-ul-oob.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-ul-phn.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-bridge-office.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-root-bridge-test.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-ul-oob.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-ul.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-stil.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\client-issuance-root.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\pkeyconfig-office-client15.xrm-ms"
+
+cscript "%ProgramFiles%\\Microsoft Office\\Office16\\ospp.vbs" /inslic:"%ProgramFiles%\\Microsoft Office\\root\\Licenses16\\pkeyconfig-office.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ul.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ppd.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_KMS\_Client-ul-oob.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-pl.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-ppd.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\ProPlusVL\_MAK-ul-oob.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\roPlusVL\_MAK-ul-phn.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-bridge-office.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-root-bridge-test.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-ul-oob.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-ul.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-stil.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\client-issuance-root.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\pkeyconfig-office-client15.xrm-ms"
+
+cscript %ProgramFiles(x86)%\\Microsoft Office\\Office16\\ospp.vbs /inslic:"%ProgramFiles(x86)%\\Microsoft Office\\root\\Licenses16\\pkeyconfig-office.xrm-ms"
