@@ -9,7 +9,6 @@ wmic远程结束进程
 wmic /node:"192.168.70.10" /user:"domain\administrator" /password:"123456" process where name="excel.exe" call terminate
 
 
-
 注册表开启远程桌面   
 
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server下的fDenyTSConnections（dword类型）值设为0
