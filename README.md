@@ -26,13 +26,13 @@ dsquery user  -limit 0 "OU=U1city,DC=U1city,DC=net" | dsmod user -Disabled no
 删除计划任务   
 schtasks /delete /TN Rass /F
 
-修复升级windows时提示：我们无法告知你的电脑是否有足够的空间来继续安装  
+修复升级windows时提示:我们无法告知你的电脑是否有足够的空间来继续安装  
 
 reagentc /disable  reagentc /setreimage /path \?\GLOBALROOT\device\harddisk0\partition4\Recovery\WindowsRE
 
 reagentc /enable
 
-无法启动到恢复环境，修复bcdedit /enum提示无法打开启动配置存储   
+无法启动到恢复环境,修复bcdedit /enum提示无法打开启动配置存储   
 
 启动到修复环境   
 
