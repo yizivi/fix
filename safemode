@@ -1,0 +1,49 @@
+
+windows如何进入安全模式
+
+Bcdedit /set {bootmgr} displaybootmenu yes 进入开机选择页面
+
+bcdedit /set {default} safeboot minimal 最小模式进入系统
+
+
+
+takeown /F M:\windows\ /a /r /d y & icacls M:\windows\  /T /C /grant users:(F,WDAC)/inheritance:e
+
+dism /image:c:\ /get-packages /format:table
+dism /image:c:\ /remove-package /packagename:Package_for_KB2834140~31bf3856ad364e35~amd64~~6.1.2.0 
+
+ 
+
+dism /online /get-packages
+dism /online /remove-package /packagename:Package_for_KB4516655~31bf3856ad364e35~amd64~~6.1.1.1
+
+wusa.exe /uninstall /kb:4516655
+
+ 
+
+批量解锁
+
+dsquery user  -limit 0 "OU=U1city,DC=U1city,DC=net" | dsmod user -Disabled no
+
+ 
+
+删除计划任务
+
+schtasks /delete /TN Rass /F
+
+ 
+
+修复升级windows时提示：我们无法告知你的电脑是否有足够的空间来继续安装
+
+reagentc /disable 
+reagentc /setreimage /path \\?\GLOBALROOT\device\harddisk0\partition4\Recovery\WindowsRE
+
+reagentc /enable
+
+ 
+
+无法启动到恢复环境，修复bcdedit /enum提示无法打开启动配置存储
+
+启动到修复环境
+
+bootrec /rebuildbcd
