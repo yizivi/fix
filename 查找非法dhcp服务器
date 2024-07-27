@@ -1,0 +1,12 @@
+查找非法dhcp服务器
+
+方法1
+sudo dhclient -r
+sudo dhclient -d eth0
+
+方法2
+sudo tcpdump -e -i eth0 -nn port 67
+
+
+dhcp原理
+https://zhuanlan.zhihu.com/p/372608515
