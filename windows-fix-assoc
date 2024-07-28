@@ -1,0 +1,72 @@
+@echo off
+cls
+echo *********************************
+echo *  Fixassoc.bat   2005.04.16.b  *
+echo *                 by 海色の月   *
+echo *********************************
+echo.
+echo Fixassoc.bat,用于恢复bat.cmd.com.exe.pif.scr.txt.ini文件关联
+echo.
+if %os%==Windows_NT goto reg5
+echo REGEDIT4>Fixassoc.reg
+goto start
+:reg5
+echo Windows Registry Editor Version 5.00>Fixassoc.reg
+:start
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\batfile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" %%*">>Fixassoc.reg
+echo.>>Fixassoc.reg
+if %os%==Windows_NT goto cmd
+goto com
+:cmd
+echo [HKEY_CLASSES_ROOT\cmdfile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" %%*">>Fixassoc.reg
+echo.>>Fixassoc.reg
+:com
+echo [HKEY_CLASSES_ROOT\comfile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" %%*">>Fixassoc.reg
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\exefile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" %%*">>Fixassoc.reg
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\piffile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" %%*">>Fixassoc.reg
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\scrfile\shell\open\command]>>Fixassoc.reg
+echo @="\"%%1\" /S">>Fixassoc.reg
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\txtfile\shell\open\command]>>Fixassoc.reg
+if %os%==Windows_NT goto txt
+echo @="NOTEPAD.EXE %%1">>Fixassoc.reg
+goto skip
+:txt
+echo @=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\>>Fixassoc.reg
+echo   00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\>>Fixassoc.reg
+echo   54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,25,00,31,00,00,\>>Fixassoc.reg
+echo   00>>Fixassoc.reg
+:skip
+echo.>>Fixassoc.reg
+echo [HKEY_CLASSES_ROOT\inifile\shell\open\command]>>Fixassoc.reg
+if %os%==Windows_NT goto ini
+echo @="NOTEPAD.EXE %%1">>Fixassoc.reg
+goto end
+:ini
+echo @=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\>>Fixassoc.reg
+echo   00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,4e,00,4f,00,\>>Fixassoc.reg
+echo   54,00,45,00,50,00,41,00,44,00,2e,00,45,00,58,00,45,00,20,00,25,00,31,00,00,\>>Fixassoc.reg
+echo   00>>Fixassoc.reg
+:end
+echo.>>Fixassoc.reg
+echo.>>Fixassoc.reg
+echo.
+pause
+start /w regedit /s Fixassoc.reg
+del Fixassoc.reg
+echo.
+echo ****************
+echo *    完 成 !   *
+echo ****************
+echo.
+pause
+cls
