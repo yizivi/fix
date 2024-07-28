@@ -1,0 +1,4 @@
+For %%i in (C:\\windows\\system32\\*.dll) Do regsvr32.exe /s %%i
+
+For %%i in (C:\\windows\\system32\\*.ocx) Do regsvr32.exe /s %%i
+
