@@ -1,0 +1,21 @@
+VBS
+
+set Cleaner=createobject("wscript.shell")
+Set fso = CreateObject("Scripting.FileSystemObject")
+Cleaner.run "bat.bat",vbhide
+
+bat
+
+@echo off
+regedit    /s \\pdc\netlogon\reg.reg
+cls
+
+reg
+
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Software\Symantec\DLO\3.0\Client]
+"DefaultMediaServer"="backsrv"
+
+[HKEY_LOCAL_MACHINE\Software\Wow6432Node\Symantec\DLO\3.0\Client]
+"DefaultMediaServer"="backsrv"
