@@ -1,0 +1,40 @@
+远程开启远程桌面：
+
+一、使用注册表，程序中自然可以使用修改注册表的方法
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\
+
+将fDenyTSConnection (REG_DWORD) 从1改为0
+
+1、表示禁用
+
+0、表示启用
+
+但这种方式有些限制，比如修改注册表需要管理员权限，修改后重启远程计算机等，还需要将远程桌面添加到防火墙例外。
+
+ 
+
+二、使用wmi 脚本（交合时的方法）
+
+查找当前设定：
+
+wmic RDToggle get AllowTSConnections 
+
+设置Terminal Services 设定
+
+wmic RDToggle where servername=”ServerName" call SetAllowTSConnections 1
+
+ 
+
+远程计算机的设定：
+
+wmic /node:"RemoteServer" /user:"domain\AdminUser" /password:"password"
+ RDToggle where servername="RemoteServer" get AllowTSConnections
+
+开启远程计算机的设定：
+
+wmic /node:"RemoteServer" /user:"domain\AdminUser" /password:"password"
+ RDToggle where servername="RemoteServer" call SetAllowTSConnections 1
+
+wmic PATH win32_terminalservicesetting WHERE (__Class!="") CALL
+ SetAllowTSConnections 1
