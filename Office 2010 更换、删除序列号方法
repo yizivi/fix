@@ -1,0 +1,37 @@
+http://technet.microsoft.com/zh-cn/library/ee624350.aspx
+
+Office 2010 更换、删除序列号方法 管理员身份运行CMD，然后按照以下步骤操作：
+
+1)定位到Office2010（32位版本）的安装目录：
+
+32位的操作系统：CD "%PROGRAMFILES%\Microsoft Office\Office14\"
+
+64位的操作系统：CD "%PROGRAMFILES(x86)%\Microsoft Office\Office14\"
+
+ 
+
+2)安装产品密钥（取代现有密钥）：
+
+cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+ 
+
+3)删除KEY，XXXXX为要删key的最后5位字母：
+
+cscript ospp.vbs /unpkey:XXXXX
+
+ 
+
+例1(安装产品密钥，适用于32位操作系统)：cscript "%PROGRAMFILES%\Microsoft Office\Office14\ospp.vbs" /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+例2(安装产品密钥，适用于64位操作系统)：cscript "%PROGRAMFILES(x86)%\Microsoft Office\Office14\ospp.vbs" /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+
+例3(删除产品密钥，适用于32位操作系统)：cscript cscript "%PROGRAMFILES%\Microsoft Office\Office14\ospp.vbs" /unpkey:XXXXX
+
+例4(删除产品密钥，适用于64位操作系统)：cscript cscript "%PROGRAMFILES(x86)%\Microsoft Office\Office14\ospp.vbs" /unpkey:XXXXX
+
+ 
+
+如果激活后因更改硬件需再次激活的话，key还有激活次数的话可以直接联机激活，如果已归0需换号的话，重复上面的第二步（即：cscript ospp.vbs /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX），然后再运行以下命令激活：
+
+cscript ospp.vbs /act
