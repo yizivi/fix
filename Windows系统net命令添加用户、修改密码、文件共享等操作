@@ -1,0 +1,24 @@
+Windows系统net命令添加用户、修改密码、文件共享等操作
+https://www.cnblogs.com/muphy/p/17111261.html
+
+添加用户(含密码)
+net user
+net user USERNAME PASSWORD /add
+net user USERNAME
+添加用户（含密码和过期时间）
+net user USERNAME PASSWORD /add /expires:never
+删除用户
+net user USERNAME /delete
+修改密码
+net user USERNAME PASSWORD
+添加组
+net localgroup
+net localgroup GROUPNAME /add
+添加用户到组
+net localgroup GROUPNAME USERNAME /add
+添加用户到管理员组
+net localgroup administrators USERNAME /add
+用户账户永不过期
+net user USERNAME /pwnexp :y
+用户密码永不过期
+wmic UserAccount where "Name='USERNAME'" set PasswordExpires=False
