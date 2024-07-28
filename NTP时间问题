@@ -1,0 +1,118 @@
+如何在 Windows Server 中配置权威时间服务器
+https://learn.microsoft.com/zh-cn/troubleshoot/windows-server/active-directory/configure-authoritative-time-server
+
+全球可用的NTP服务器列表
+http://www.ntp.org.cn/
+
+
+
+用w32tm设置服务器时间同步
+
+Windows提供的w32tm
+
+程序可以用来设置时间同步服务器，其用法如下：
+  
+
+1、指定外部时间源并与之同步
+
+w32tm /config /manualpeerlist:"210.72.145.44" /syncfromflags:manual /reliable:yes /update  
+
+
+/manualpeerlist
+表示外部时间源服务器列表，多个服务器之间可用空格分隔，
+
+210.72.145.44
+
+是中国国家授时中心的时间服务器ip地址
+ 
+
+/syncfromflags:manual
+
+表示与指定的外部时间源服务器列表中的服务器进行同步
+
+/reliable:yes
+
+设置此计算机是一个可靠的时间源。此设置只对域控制器有意义。
+
+
+/update
+向时间服务发出配置已更改的通知，使更改生效
+
+ 
+2、显示本地时间与目的时间的时间差
+w32tm /stripchart /computer:210.72.145.44 /samples:30 /dataonly  
+
+3、显示目前服务器指定的外部时间源
+w32tm /query /source  
+
+4、恢复
+Windows Time Service的预设值
+
+
+net stop w32time 
+
+w32tm /unregister 
+
+w32tm /register 
+
+net start w32time  
+
+在域环境中，只需设置根域控制器的外部时间源即可，其它服务器在添加进域中时将自动设置与域控制器
+
+时间同步。
+
+改设置可解决域控制器的时间同步问题
+
+如：
+
+Time-Service EventID:36  
+
+国内常用NTP服务器地址及IP 
+
+
+————————————————————————————————————
+ntp.sjtu.edu.cn 202.120.2.101 (上海交通大学网络中心NTP服务器地址）
+s1a.time.edu.cn	北京邮电大学
+s1b.time.edu.cn	清华大学
+s1c.time.edu.cn	北京大学
+s1d.time.edu.cn	东南大学
+s1e.time.edu.cn	清华大学
+s2a.time.edu.cn	清华大学
+s2b.time.edu.cn	清华大学
+s2c.time.edu.cn	北京邮电大学
+s2d.time.edu.cn	西南地区网络中心
+s2e.time.edu.cn	西北地区网络中心
+s2f.time.edu.cn	东北地区网络中心
+s2g.time.edu.cn	华东南地区网络中心
+s2h.time.edu.cn	四川大学网络管理中心
+s2j.time.edu.cn	大连理工大学网络中心
+s2k.time.edu.cn CERNET桂林主节点
+s2m.time.edu.cn 北京大学
+——————————————————————————
+
+以下是国内可用的NTP Server：
+
+
+1.cn.pool.ntp.org
+
+2.cn.pool.ntp.org
+
+3.cn.pool.ntp.org
+
+0.cn.pool.ntp.org
+
+cn.pool.ntp.org
+
+tw.pool.ntp.org
+
+0.tw.pool.ntp.org
+
+1.tw.pool.ntp.org
+
+2.tw.pool.ntp.org
+
+3.tw.pool.ntp.org
+
+这十台服务器从地理位置上说离我们最近，它们所提供给我们的时间与标准时间之间的差别也最小，在国内使用，
+精度完全够用！如果你现在还没给你的Windows配置或者还在使用微软自己的NTP Server，我觉得，你该换换了，
+同时因为上面的服务器是进行轮询操作的（大陆、台湾各自轮询），所以任选其一即可！
