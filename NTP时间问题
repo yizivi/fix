@@ -1,9 +1,10 @@
+https://www.cnblogs.com/liushui-sky/p/9203657.html
+
 如何在 Windows Server 中配置权威时间服务器
 https://learn.microsoft.com/zh-cn/troubleshoot/windows-server/active-directory/configure-authoritative-time-server
 
 全球可用的NTP服务器列表
 http://www.ntp.org.cn/
-
 
 
 用w32tm设置服务器时间同步
