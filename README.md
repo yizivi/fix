@@ -27,19 +27,14 @@ dsquery user  -limit 0 "OU=U1city,DC=U1city,DC=net" | dsmod user -Disabled no
 schtasks /delete /TN Rass /F
 
 修复升级windows时提示:我们无法告知你的电脑是否有足够的空间来继续安装  
-
 reagentc /disable  reagentc /setreimage /path \?\GLOBALROOT\device\harddisk0\partition4\Recovery\WindowsRE
 
 reagentc /enable
 
-无法启动到恢复环境,修复bcdedit /enum提示无法打开启动配置存储   
-
-启动到修复环境   
-
+无法启动到恢复环境,修复bcdedit /enum提示无法打开启动配置存储 启动到修复环境   
 bootrec /rebuildbcd   
 
 修复WMI   
-
 @echo on  cd /d c:\temp if not exist %windir%\system32\wbem goto TryInstall cd /d %windir%\system32\wbem net stop winmgmt winmgmt /kill if exist Rep_bak rd Rep_bak /s /q rename Repository Rep_bak for %%i in (.dll) do RegSvr32 -s %%i for %%i in (.exe) do call :FixSrv %%i for %%i in (.mof,.mfl) do Mofcomp %%i net start winmgmt goto End
 
 :FixSrv if /I (%1) == (wbemcntl.exe) goto SkipSrv if /I (%1) == (wbemtest.exe) goto SkipSrv if /I (%1) == (mofcomp.exe) goto SkipSrv %1 /RegServer
